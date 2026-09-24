@@ -17,15 +17,31 @@ Despues haz los pasos pedidos
 """
 # Escribe tu código aquí
 
+mascotas = ["perro", "gato", "loro"]
+print(mascotas)
+
 # Escribe el código para saber la cantidad de elementos que tiene la lista, imprimir por consola
+
+print(len(mascotas))
 
 # Escribe el código para acceder al valor de la posición 2, imprimir por consola
 
+print(mascotas[2])
+
 # Escribe el código para agregar una elemento a la lista, imprimir por consola la lista
+
+mascotas.append("pez")
+print(mascotas)
 
 # Escribe el código para modificar un elemento de la lista, imprimir por consola la lista
 
+mascotas[2] = "conejo"
+print(mascotas)
+
 # Escribe el código para eliminar un elemento de la lista, imprimir por consola la lista
+
+mascotas.remove("gato")
+print(mascotas)
 
 
 """
@@ -43,14 +59,24 @@ Despues haz los pasos pedidos
 """
 # Escribe tu código aquí
 
+plantas = ("cactus", "orquidea", "rosas")
+
+print(plantas)
+
 # Escribe el código para saber la cantidad de elementos que tiene la tupla, imprimir por consola
+
+print(len(plantas))
 
 # Escribe el código para acceder al valor de la posición 2, imprimir por consola
 
+print(plantas[2])
+
 # Intentar modificar una tupla
-# plantas[1] = 'hoja rota'  # Descomenta esta línea para ver qué sucede
+#plantas[1] = 'hoja rota'  # Descomenta esta línea para ver qué sucede
 
 # Escribe tu análisís acá acerca de qué sucede
+
+# Como plantas es una tupla, esto produce un error que ocurre porque las tuplas no se pueden modificar después de crearlas.
 
 
 """
@@ -68,15 +94,35 @@ Haz los pasos pedidos
 """
 # Escribe el código aqui
 
+nombres = {"María", "Cris", "Cris", "Alex"}
+
+print(nombres)
+
 # Explica qué sucede cuándo imprimes el valor que almacena "nombres"
+
+# Al imprimirlo, se ve: {'Alex', 'Cris', 'María'}, Cris aparece una sola vez porque los set no permiten elementos duplicados.
 
 # Escribe el código para saber la cantidad de elementos que tiene el set, imprimir por consola
 
+print(len(nombres))
+
 # Escribe el código para acceder al valor de la posición 3, imprimir por consola
+
+list_nombres = list(nombres)
+
+#print(list_nombres[3])
 
 # Escribe el código para agregar una elemento al set, imprimir por consola el set
 
+nombres.add("Juan")
+
+print(nombres)
+
 # Escribe el código para eliminar un elemento del set, imprimir por consola el set
+
+nombres.remove("Cris")
+
+print(nombres)
 
 """
  --- DICCIONARIOS ---
@@ -90,10 +136,33 @@ Puedes añadir, modificar y eliminar pares clave-valor.
 Crea un diccionario llamado "ciudad" con las claves 'nombre' y 'pais' y los valores 'Barcelona' y 'España' respectivamente.
 Imprime el diccionario 
 """
+
+ciudad = {
+    "nombre": "Barcelona",
+    "pais": "España"
+}
+
+print(ciudad)
+
 # Escribe el código aqui para acceder y ver por consola el valor de 'nombre'
+
+print(ciudad["nombre"])
 
 # Escribe el código aqui para añadir un nuevo par clave-valor y ver por consola el valor de 'ciudad'
 
+ciudad["pais"] = "España"
+ciudad["habitantes"] = 1600000
+
+print(ciudad)
+
 # Escribe el código aqui para modificar el valor de un par clave-valor de 'ciudad' y verlo por consola
 
+ciudad["nombre"] = "Madrid"
+
+print(ciudad)
+
 # Escribe el código aqui para eliminar un par clave-valor de 'ciudad' y verlo por consola
+
+del ciudad["pais"]
+
+print(ciudad)
